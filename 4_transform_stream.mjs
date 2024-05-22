@@ -6,7 +6,7 @@ const fileWriteStream = fs.createWriteStream("log_write.txt");
 
 const trans = new Transform({
   transform(chuck, _, callback) {
-    callback(_, chuck.toString().toUpperCase());
+    callback(null, chuck.toString().toUpperCase());
   },
 });
 
